@@ -10,7 +10,7 @@ A fully custom quadcopter drone featuring custom chassis modelling, PCB design, 
 To design and build a fully functional quadcopter from scratch, integrating hardware and software systems for flight control and telemetry.
 
 ###  Key Features
-- Custom PCB for flight control 
+- Custom PCB shield for sensor integration and motor control
 - swappable ESP32 microcontroller breakout-board
 - Altimeter, Gyroscope and Accelerometer sensor fusion
 - PID controller determined with a mathematical model 
@@ -38,9 +38,9 @@ We used
 - **Tools Used:** Kicad 9.0
 - **Schematic Overview:** *(Insert link or image)*  
 - **Features:**
-  - Sensor integration using I2C
-  - Motor control circuitry  
-  - Communication interfaces (UART, I2C, SPI)  
+  - Sensor integration using I2C for the IMU and pressure sensor
+  - Motor control circuitry using N-channel mosfets
+  - Power management 
 
 #### 🪛 Fabrication Notes
 - PCB layer count  
