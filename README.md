@@ -10,8 +10,8 @@ A fully custom quadcopter drone featuring custom chassis modelling, PCB design, 
 To design and build a fully functional quadcopter from scratch, integrating hardware and software systems for flight control and telemetry.
 
 ###  Key Features
-- Custom PCB for flight control
-- using ESP32 microcontroller 
+- Custom PCB for flight control 
+- swappable ESP32 microcontroller breakout-board
 - Altimeter, Gyroscope and Accelerometer sensor fusion
 - PID controller determined with a mathematical model 
 - Remote interface using WIFI for reading telemetry data
@@ -35,13 +35,11 @@ To design and build a fully functional quadcopter from scratch, integrating hard
 ## ⚙️ Hardware Design
 We used
 ### 🧠 PCB Design
-- **Tools Used:** KiCad / Altium Designer  
-- **Microcontroller:** *e.g., STM32 / ESP32 / ATmega328*  
+- **Tools Used:** Kicad 9.0
 - **Schematic Overview:** *(Insert link or image)*  
 - **Features:**
-  - Power regulation  
-  - Sensor integration  
-  - Motor control outputs  
+  - Sensor integration using I2C
+  - Motor control circuitry  
   - Communication interfaces (UART, I2C, SPI)  
 
 #### 🪛 Fabrication Notes
