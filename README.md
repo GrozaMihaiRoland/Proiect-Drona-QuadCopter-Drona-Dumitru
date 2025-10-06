@@ -36,16 +36,17 @@ To design and build a fully functional quadcopter from scratch, integrating hard
 We used
 ### 🧠 PCB Design
 - **Tools Used:** Kicad 9.0
-- **Schematic Overview:** *(Insert link or image)*  
+- **Schematic Overview:** *(Insert link or image)*
+  The purpose of this component is to include power control circuitry for the ESP32, while also 
 - **Features:**
   - Sensor integration using I2C for the IMU and pressure sensor
   - Motor control circuitry using N-channel mosfets
   - Power management 
 
 #### 🪛 Fabrication Notes
-- PCB layer count  
-- Dimensions  
-- Manufacturer info  
+- 2 Layer PCB
+- 35 x 39 mm size  
+- Produced by JLCPCB in China
 
 ---
 
