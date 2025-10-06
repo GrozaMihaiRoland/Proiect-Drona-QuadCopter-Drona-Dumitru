@@ -1,20 +1,20 @@
 # Drona Quadcopter - Drona Dumitru
 
-## Motivatie
-Mi a placut dronele cand eram mic asa ca fac una cand sunt mare.
+## Motivation
+Me like drone when young, me build drone when olds or sth lol
 
-## In ce consta proiectul?
-Ne-am propus sa realizam o drona quadcopter de la zero, in care am realizat designul PCB-ului, , un controller de stabilizare optimizat folosind modelare matematica,
+## Overview 
+A fully custom quadcopter drone featuring custom chassis modelling, PCB design, and firmware.
 
-### 🎯 Care este scopul?
+### 🎯 Scope
 To design and build a fully functional quadcopter from scratch, integrating hardware and software systems for flight control and telemetry.
 
 ### ✨ Key Features
-- Custom PCB for flight control  
-- CAD-designed chassis  
-- Embedded firmware for sensors and control  
-- Remote controller interface  
-- Modular and open-source architecture  
+- Custom PCB for flight control
+- using ESP32 microcontroller 
+- Altimeter, Gyroscope and Accelerometer sensor fusion
+- PID controller determined with a mathematical model 
+- Remote controller interface using WIFI for reading telemetry data
 
 ---
 
