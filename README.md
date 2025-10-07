@@ -1,10 +1,8 @@
 # Drona Quadcopter - Drona Dumitru
 
-## Motivation
-Me like drone when young, me build drone when olds or sth lol
 
 ## Overview 
-A fully custom quadcopter drone featuring custom chassis modelling, PCB design, and firmware.
+A fully custom quadcopter drone featuring custom chassis modelling, PCB design, and PID controller with Kalman filtering.
 
 ###  Scope
 To design and build a fully functional quadcopter from scratch, integrating hardware and software systems for flight control and telemetry.
@@ -25,7 +23,7 @@ To design and build a fully functional quadcopter from scratch, integrating hard
 
 ### 🧩 Component Overview
 - Flight Control Board (PCB)
-- 3D printed lightweight frame
+- 3D printed PETG frame
 - 3.7v 300 mAh LiPo Battery for power delivery
 - Altimeter (BMP388 Pressure Sensor), BMI088 (IMU for Accelerometer and Gyroscope data)
 - Communication using Wi-Fi  
@@ -34,35 +32,45 @@ To design and build a fully functional quadcopter from scratch, integrating hard
 
 ## ⚙️ Hardware Design
 We used
-### 🧠 PCB Design
+### PCB Design
 - **Tools Used:** Kicad 9.0
 - **Schematic Overview:** *(Insert link or image)*
-  The purpose of this component is to include power control circuitry for the ESP32, while also 
+  The purpose of this component is to integrate the motor amplifier circuits and the sensors all in one compact board. 
+  
 - **Features:**
   - Sensor integration using I2C for the IMU and pressure sensor
   - Motor control circuitry using N-channel mosfets
   - Power management 
 
-#### 🪛 Fabrication Notes
+- **Labels:**
+  - BAT_V - 3.7v from battery
+  - VCC - 3.3v from ESP32
+  - M1-4 - motor PWM signal
+  - IMU_SDA/SCL - I2C communication line
+  - IMU_INT - interrupt pin for sensors
+
+  - "BAT" JST Connector - used for connecting the PCB to the battery power.
+  - "ESP32" JST Connector - used for connecting the ESP32 to battery power via the battery pins on the back of the board.
+  - MOTOR 1-4 through hole connectors - used for wiring the motors to the PCB.
+
+#### Fabrication Notes
 - 2 Layer PCB
 - 35 x 39 mm size  
 - Produced by JLCPCB in China
-
 ---
 
-### 🪶 Chassis / Frame Design
-- **Design Software:** Fusion 360 / SolidWorks  
-- **Materials:** Carbon fiber / PLA  
-- **Dimensions & Weight:** *(Specify here)*  
-- **Assembly Instructions:** *(Add steps or images)*  
-- **Mounting Points:** For motors, PCB, sensors, and battery  
+### Chassis / Frame Design
+- **Design Software:** Inventor
+- **Materials:** PETG filament
+- **Dimensions & Weight:** *(Specify here)*   
+- **Mounting Points:** friction fits for the motors and PCB to avoid using screws
 
 ---
 
 ## 💻 Software & Firmware
 
 ### ✈️ Flight Controller Code
-- **Language:** C / C++  
+- **Language:** Arduino C++ 
 - **Overview:** Handles stabilization, control input, and telemetry  
 - **Control Algorithm:** PID / Complementary Filter / Kalman Filter  
 - **Dependencies:** *(List required libraries or SDKs)*  
