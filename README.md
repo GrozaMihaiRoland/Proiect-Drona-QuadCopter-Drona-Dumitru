@@ -19,7 +19,7 @@ To design and build a fully functional quadcopter from scratch, integrating hard
 ## 🧱 Project Architecture
 
 ### 📊 System Block Diagram
-*(Insert or link to your system diagram here.)*
+![Alt text](Fisiere PCB\Schema electrica.png)
 
 ### 🧩 Component Overview
 - Flight Control Board (PCB)
