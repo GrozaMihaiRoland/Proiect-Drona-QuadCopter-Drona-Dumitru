@@ -19,7 +19,6 @@ To design and build a fully functional quadcopter from scratch, integrating hard
 ## 🧱 Project Architecture
 
 ### 📊 System Block Diagram
-![Poza Schema](FisierePCB/schemaElectrica.png)
 
 ### 🧩 Component Overview
 - Flight Control Board (PCB)
@@ -34,7 +33,9 @@ To design and build a fully functional quadcopter from scratch, integrating hard
 We used
 ### PCB Design
 - **Tools Used:** Kicad 9.0
-- **Schematic Overview:** *(Insert link or image)*
+- **Schematic Overview:** 
+![Poza Schema](FisierePCB/schemaElectrica.png)
+
   The purpose of this component is to integrate the motor amplifier circuits and the sensors all in one compact board. 
   
 - **Features:**
