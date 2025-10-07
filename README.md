@@ -31,9 +31,9 @@ To design and build a fully functional quadcopter from scratch, integrating hard
 
 ## ⚙️ Hardware Design
 
-### PCB Design
-
 ![Poza PCB](FisierePCB/pcbDesign.png)
+
+### PCB Design
 
 - **Tools Used:** Kicad 9.0
 - **Schematic Overview:** 
