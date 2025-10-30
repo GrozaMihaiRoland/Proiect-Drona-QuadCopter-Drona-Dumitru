@@ -6,6 +6,7 @@ A fully custom quadcopter drone featuring custom chassis modelling, PCB design, 
 
 ###  Scope
 To design and build a fully functional quadcopter from scratch, integrating hardware and software systems for flight control and telemetry.
+Work in progress!
 
 ###  Key Features
 - Custom PCB shield for sensor integration and motor control
@@ -72,104 +73,13 @@ To design and build a fully functional quadcopter from scratch, integrating hard
 
 ---
 
-## 💻 Software & Firmware
-
-### ✈️ Flight Controller Code
-- **Language:** Arduino C++ 
-- **Overview:** Handles stabilization, control input, and telemetry  
-- **Control Algorithm:** PID / Complementary Filter / Kalman Filter  
-- **Dependencies:** *(List required libraries or SDKs)*  
-
-### 📡 Sensor Integration
-- **Supported Sensors:** IMU, Barometer, GPS  
-- **Data Processing:** Calibration, filtering methods  
-- **Communication Protocols:** I2C / SPI / UART  
-
-### 🎮 Controller Interface
-- **Type:** Custom remote / Smartphone app  
-- **Communication:** RF / Bluetooth / Wi-Fi  
-- **Control Mapping:** Throttle, Yaw, Pitch, Roll  
-- **Safety Features:** Failsafe, signal loss handling  
-
----
-
-## ⚡ Power & Electronics
-- **Power Source:** LiPo battery (e.g., 3S 11.1V)  
-- **Power Distribution:** *(Add diagram or explanation)*  
-- **ESCs and Motors:** Ratings and compatibility  
-- **Performance:** Current draw and expected flight time  
-
----
-
-## 🧠 System Integration
-- **Startup Sequence**  
-- **Calibration Procedure**  
-- **Testing Environment**  
-- **Debugging Interface:** UART logs, telemetry  
-
----
-
-## 🚀 Getting Started
-
-### 🔧 Requirements
-- **Hardware:** Components list  
-- **Software:** IDE, compiler, libraries  
-
-### 🧰 Build Instructions
-1. Assemble chassis  
-2. Mount PCB and electronics  
-3. Flash firmware  
-4. Pair controller  
-5. Calibrate sensors  
-
-### 🕹️ Running the Drone
-- Power-on sequence  
-- Arming motors  
-- Basic flight commands  
-
----
-
-## 📊 Performance Results
-- Hover stability tests  
-- Response time  
-- Sensor accuracy plots  
-- Power consumption  
-
----
-
-## 🧪 Future Work
-- GPS waypoint navigation  
-- Autonomous flight  
-- Obstacle avoidance  
-- Frame material optimization  
-
----
+## Software  -- WIP
 
 ## 👥 Contributors
 | Name | Role |
-|------|------|
-| Your Name | PCB Design |
-| Teammate 1 | Firmware |
-| Teammate 2 | Chassis Design |
-| Teammate 3 | Controller Integration |
+|--------------------|----------|
+| Groza Mihai Roland |  |
+| Dumitru Stefan Mihna |  |
 
----
 
-## 📄 License
-This project is licensed under the **MIT License**.  
-See [LICENSE](LICENSE) for more details.
-
----
-
-## 🖼️ Gallery / Media
-*(Add images and videos here)*
-
----
-
-## 🔗 References
-- [IMU Datasheet](#)  
-- [ESC Manual](#)  
-- [Flight Control Algorithms Paper](#)  
-- [Open-Source Libraries Used](#)  
-
----
+--
