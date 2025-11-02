@@ -79,7 +79,7 @@ Work in progress!
 | Name | Role |
 |--------------------|----------|
 | Groza Mihai Roland |  |
-| Dumitru Stefan Mihna |  |
+| Dumitru Stefan Mihnea |  |
 
 
 --
