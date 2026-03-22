@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ESP IOT DASHBOARD</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="topnav">
+            <h1> Gyroscope Readings (WEBSOCKET)</h1>
+        </div>
+        <div class="content">
+            <div class="card-grid">
+                <div class="card">
+                    <p class="card-title"><i class="fas fa-thermometer-threequarters" style="color:#059e8a;"></i> Angle X </p>
+                    <p class="reading"><span id="x"></span> &deg;</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Angle Y</p>
+                    <p class="reading"><span id="y"></span> &deg;</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Angle Z</p>
+                    <p class="reading"><span id="z"></span> &deg;</p>
+                </div>
+                
+                <button id="R" class="reading">Red</button>
+                <button id="G" class="reading">Green</button>
+                <button id="B" class="reading">Blue</button>
+                
+                
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
