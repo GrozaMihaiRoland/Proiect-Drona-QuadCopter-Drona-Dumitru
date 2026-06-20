@@ -9,8 +9,7 @@ To design and build a fully functional quadcopter from scratch, integrating hard
 Work in progress!
 
 ###  Key Features
-- Custom PCB shield for sensor integration and motor control
-- swappable ESP32 microcontroller breakout-board
+- Custom PCBs for microcontroller, sensor integration and motor control
 - Altimeter, Gyroscope and Accelerometer sensor fusion
 - PID controller determined with a mathematical model 
 - Remote interface using WIFI for reading telemetry data
@@ -23,46 +22,41 @@ Work in progress!
 
 ### 🧩 Component Overview
 - Flight Control Board (PCB)
+- Motor driver Board (PCB)
 - 3D printed PETG frame
-- 3.7v 300 mAh LiPo Battery for power delivery
+- 3.7v 400 mAh LiPo Battery for power delivery
 - Altimeter (BMP388 Pressure Sensor), BMI088 (IMU for Accelerometer and Gyroscope data)
+- DRV8215 H-bridge motor drivers with current sensing, OVP and OCP
 - Communication using Wi-Fi  
 
 ---
 
 ## ⚙️ Hardware Design
 
-![Poza PCB](FisierePCB/pcbDesign.png)
+![Poza PCB](FisierePCB/PCBv2/pcb.png)
 
 ### PCB Design
 
 - **Tools Used:** Kicad 9.0
 - **Schematic Overview:** 
 
-![Poza Schema](FisierePCB/schemaElectrica.png)
+![Poza Schema](FisierePCB/PCBv2/microcontroller.png)
+![Poza Schema](FisierePCB/PCBv2/senzori.png)
+![Poza Schema](FisierePCB/PCBv2/drivere_motoare.png)
+![Poza Schema](FisierePCB/PCBv2/regulator.png)
 
   The purpose of this component is to integrate the motor amplifier circuits and the sensors all in one compact board. 
   
 - **Features:**
+  - 32 bit dual core microcontroller with WIFI antenna and USB programming
   - Sensor integration using I2C for the IMU and pressure sensor
-  - Motor control circuitry using N-channel mosfets
-  - Power management 
-
-- **Labels:**
-  - BAT_V - 3.7v from battery
-  - VCC - 3.3v from ESP32
-  - M1-4 - motor PWM signal
-  - IMU_SDA/SCL - I2C communication line
-  - IMU_INT - interrupt pin for sensors
-
-  - "BAT" JST Connector - used for connecting the PCB to the battery power.
-  - "ESP32" JST Connector - used for connecting the ESP32 to battery power via the battery pins on the back of the board.
-  - MOTOR 1-4 through hole connectors - used for wiring the motors to the PCB.
+  - Motor control circuitry using I2C programmed H bridge drivers
+  - Power regulation and overvoltage protection 
+  
 
 #### Fabrication Notes
-- 2 Layer PCB
-- 35 x 39 mm size  
-- Produced by JLCPCB in China
+- 4 Layer PCB
+- 2 37 x 51 mm PCBs stacked on top of eachother 
 ---
 
 ### Chassis / Frame Design
@@ -78,8 +72,8 @@ Work in progress!
 ## 👥 Contributors
 | Name | Role |
 |--------------------|----------|
-| Groza Mihai Roland |  |
-| Dumitru Stefan Mihnea |  |
+| Groza Mihai Roland | PCB and chassis design |
+| Dumitru Stefan Mihnea | Drone programming and control |
 
 
 --
