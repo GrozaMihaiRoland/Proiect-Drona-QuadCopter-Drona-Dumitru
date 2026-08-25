@@ -23,11 +23,11 @@ Work in progress!
 ### 🧩 Component Overview
 - Flight Control Board (PCB)
 - Motor driver Board (PCB)
-- 3D printed PETG frame
-- 3.7v 400 mAh LiPo Battery for power delivery
 - Altimeter (BMP388 Pressure Sensor), BMI088 (IMU for Accelerometer and Gyroscope data)
 - DRV8215 H-bridge motor drivers with current sensing, OVP and OCP
-- Communication using Wi-Fi  
+- tps62162 switch-mode regulator for 3.3V output
+- 3.7v 400 mAh LiPo Battery for power delivery
+- 3D printed PETG frame
 
 ---
 
