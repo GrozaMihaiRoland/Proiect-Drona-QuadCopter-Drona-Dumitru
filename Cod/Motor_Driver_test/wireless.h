@@ -15,12 +15,13 @@ class Wireless
 {
   private:
     WiFiUDP udp;
-    IPAddress esp32_IP{192, 168, 100, 200};
-    IPAddress gateway{192, 168, 100, 1};
-    IPAddress subnet{255, 255, 255, 0};
+    IPAddress esp32_IP(192, 168, 100, 200);
+    IPAddress gateway(192, 168, 100, 1);
+    IPAddress subnet(255, 255, 255, 0);
 
     //IPAddress laptop_IP{192, 168, 100, 47}; // acasa
-    IPAddress laptop_IP{192, 168, 100, 193}; // la dumitru
+    //IPAddress laptop_IP{192, 168, 100, 193}; // la dumitru
+    IPAddress laptop_IP(192, 168, 100, 176); // la dumitru
 
     uint16_t laptop_port = 7500;
 
