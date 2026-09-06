@@ -2,9 +2,9 @@ import socket
 import struct
 import threading
 
-esp_ip_address = "192.168.100.200"
-esp_port = 8000
-laptop_port = 7500
+esp_ip_address = "192.168.4.1"
+esp_port = 6000
+laptop_port = 6000
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind(('', laptop_port))
@@ -15,14 +15,34 @@ running = True
 def command_loop():
     global running
     while running:
-        command = input("Enter esp32 command:")
+        user_input = input("Enter esp32 command:").split()
 
-        if command == "y":
-            sock.sendto(b'\x01', (esp_ip_address, esp_port))
-        elif command == "n":
-            sock.sendto(b'\x02', (esp_ip_address, esp_port))
-        elif command == 'e':
-            running = False
+        #logic for different command lengths
+        if len(user_input) == 4:
+            command, byte1, byte2, byte3, byte4 = user_input
+        if len(user_input) == 1:
+            command = user_input
+
+        if command == "com": # update commands
+            packet = struct.pack('<BBbbb', 0x10, int(byte1), int(byte2), int(byte3), int(byte4))
+            sock.sendto(packet, (esp_ip_address, esp_port))
+
+        elif command == "stp":  # emergency stop command
+            packet = struct.pack('<BBbbb', 0x20, 0, 0, 0, 0)
+            sock.sendto(packet, (esp_ip_address, esp_port))
+
+        elif command == "lnd":  # landing command
+            packet = struct.pack('<BBbbb', 0x21, 0, 0, 0, 0)
+            sock.sendto(packet, (esp_ip_address, esp_port))
+
+        elif command == "hov":  # hover command
+            packet = struct.pack('<BBbbb', 0x22, 0, 0, 0, 0)
+            sock.sendto(packet, (esp_ip_address, esp_port))
+
+        elif command == "wdg":  # watchdog command
+            packet = struct.pack('<BBbbb', 0x00, 0, 0, 0, 0)
+            sock.sendto(packet, (esp_ip_address, esp_port))
+
         else:
             print("ERROR: Invalid command")
 
@@ -31,8 +51,9 @@ def receive_loop():
     while running:
         try:
             data, addr = sock.recvfrom(16)
-            motor_voltage, motor_current, battery_voltage = struct.unpack('<HHH', data)
-            print(f"Motor2: {motor_voltage} mV, {motor_current} mA, Battery: {battery_voltage} mV")
+            thrust, pitch, roll, yaw = struct.unpack('<Bbbb', data)
+            print(f"thrust: {thrust}, pitch: {pitch}, roll: {roll}, yaw: {yaw} ")
+
         except socket.timeout:
             continue
 
