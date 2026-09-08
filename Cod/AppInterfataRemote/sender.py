@@ -52,13 +52,10 @@ while isRunning:
         send_to_sock(COMMAND_HEADER_SET_DUTY, float(m1), float(m2), float(m3), float(m4))
 
     elif header == 'SCOMD':
-        #z_height, pitch, roll, yaw = payload
+        z_height, pitch, roll = payload
         # pack header and drone user commands in little endian format, header is uint32, commands are all floatss
-        #send_to_sock(COMMAND_HEADER_SET_COMMANDS, float(z_height), float(pitch), float(roll), 0)
+        send_to_sock(COMMAND_HEADER_SET_COMMANDS, float(z_height), float(pitch), float(roll), 0)
 
-        for m1 in range(40, 61, 5):
-            send_to_sock(COMMAND_HEADER_SET_DUTY, m1/100, 0, 0, 0)
-            input("Next:")
 
     elif header == 'TIDLE':
         send_to_sock(COMMAND_HEADER_TRANSMIT_MODE_IDLE, 0, 0, 0, 0)
