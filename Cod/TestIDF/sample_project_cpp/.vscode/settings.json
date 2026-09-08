@@ -30,7 +30,7 @@
   "clangd.arguments": [
     "--background-index",
     "--query-driver=**",
-    "--compile-commands-dir=c:\\Users\\Roland PC\\sample_project_cpp\\build"
+    "--compile-commands-dir=c:\\Users\\Roland PC\\Documents\\GitHub\\Repo_drona\\Cod\\TestIDF\\sample_project_cpp\\build"
   ],
   "idf.flashType": "UART",
   "idf.portWin": "COM4"

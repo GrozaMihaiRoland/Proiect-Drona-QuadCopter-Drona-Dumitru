@@ -217,7 +217,6 @@ void Barometer::init()
         }
     };
 
-
     sensor_config_packet_t config_packet;
     i2c_master_bus_add_device(bus_handle, &slave_cfg, &handle);
 
@@ -414,5 +413,5 @@ float Barometer::get_height()
     this->read();
     height = (pressure - pressure_at_origin) / HEIGHT_LIN_APROXIMATION_SLOPE; 
     ESP_LOGI(TAG, "Height %f mm, Pressure: %f Pa, Temperature %f C", height*1000.0f, pressure, temperature);
-        return height;
+    return height;
 }

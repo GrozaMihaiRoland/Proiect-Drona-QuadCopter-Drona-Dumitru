@@ -3,6 +3,7 @@
 void onboard_led_init()
 {
     gpio_reset_pin((gpio_num_t)ONBOARD_LED_PIN);
+    gpio_set_drive_capability((gpio_num_t)ONBOARD_LED_PIN, GPIO_DRIVE_CAP_0);
     
     gpio_config_t io_conf = {};
     io_conf.intr_type = GPIO_INTR_DISABLE; 
