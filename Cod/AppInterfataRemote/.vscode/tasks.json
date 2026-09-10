@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Sender",
+            "type": "shell",
+            "command": "python sender.py",
+            "problemMatcher": [],
+            "presentation": {
+                "panel": "shared",
+                "group": "python-apps",
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "Run Receiver",
+            "type": "shell",
+            "command": "python receiver.py",
+            "problemMatcher": [],
+            "presentation": {
+                "panel": "shared",
+                "group": "python-apps",
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "Run Both",
+            "dependsOn": [
+                "Run Sender",
+                "Run Receiver"
+            ],
+            "dependsOrder": "parallel",
+            "problemMatcher": []
+        }
+    ]
+}
