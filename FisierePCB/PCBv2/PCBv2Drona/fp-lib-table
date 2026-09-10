@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Push")(type "KiCad")(uri "${KIPRJMOD}/Push.pretty")(options "")(descr ""))
+  (lib (name "BatteryPads")(type "KiCad")(uri "${KIPRJMOD}/BatteryPads.pretty")(options "")(descr ""))
+)
